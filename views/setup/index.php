@@ -175,6 +175,13 @@ if (isset($_POST['submit'])) {
             background-color: rgba(102, 51, 153, 0.281);
             margin: auto;
         }
+        .smallscreen
+        {
+        font-weight: bold;
+        font-size: large;
+        color: white;
+        
+        }
         
     </style>
     
