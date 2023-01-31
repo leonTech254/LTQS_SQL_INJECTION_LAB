@@ -130,6 +130,11 @@ font-weight: bold;
     color: green;
 
 }
+.labs
+{
+ background-color: green; 
+ border-radius:2px;  
+}
  </style>   
     
 </body>

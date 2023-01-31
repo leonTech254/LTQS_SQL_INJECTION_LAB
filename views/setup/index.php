@@ -180,8 +180,13 @@ if (isset($_POST['submit'])) {
         font-weight: bold;
         font-size: large;
         color: white;
-        
+
         }
+        .setup
+{
+ background-color: green; 
+ border-radius:2px;  
+}
         
     </style>
     
