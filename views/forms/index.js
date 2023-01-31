@@ -15,7 +15,7 @@ $(document).ready(function () {
             "username": username,
             "password":password,
       },
-      success: function(response) {
+        success: function (response) {
         $("#container").html(response);
       }
     });

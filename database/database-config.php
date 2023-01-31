@@ -3,6 +3,7 @@
 $user='root';
 $pass='';
 $server="localhost";
+$database="LTQSLAB";
 try {
 $conn=new mysqli($server,$user,$pass);
 
@@ -38,7 +39,7 @@ $db_conn=mysqli_connect($server,$user,$pass,$database);
 $varchar="VARCHAR(20) NOT NULL";
 $int="INT(100) NOT NULL";
 $varchar_default="/image/users/user.jpg";
- $sql_table="CREATE TABLE IF NOT EXISTS Users( id INT AUTO_INCREMENT PRIMARY KEY, firstname $varchar, lastname $varchar,password $varchar, image VARCHAR(100) DEFAULT '/image')";
+ $sql_table="CREATE TABLE IF NOT EXISTS Users( id INT AUTO_INCREMENT PRIMARY KEY, username $varchar,firstname $varchar, lastname $varchar,password $varchar, image VARCHAR(100) DEFAULT '/image')";
 mysqli_query($db_conn,$sql_table);
 // print(mysqli_error($db_conn));
 
@@ -51,7 +52,7 @@ foreach($firstnames as $name)
 {
     $i++;
    $password=rand(10000,90000);
-   $sql="INSERT INTO Users(firstname,lastname,password) VALUES('$name','$lastnames[$i]','$password')";
+   $sql="INSERT INTO Users(username,firstname,lastname,password) VALUES('$name','$name','$lastnames[$i]','$password')";
    mysqli_query($db_conn,$sql);
    
     
