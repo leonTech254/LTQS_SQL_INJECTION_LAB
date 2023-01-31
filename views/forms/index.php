@@ -34,6 +34,9 @@ require ("../../Components/nav.php");
         </div>
 
         <div class="database-response" id="container">
+            <span>
+                Database response will display here.
+            </span>
 <ul>
     <li><span class="label" id="status"></span> <span></span></li>
     <li><span class="label" id="query"></span> <span></span></li>
@@ -85,6 +88,7 @@ require ("../../Components/nav.php");
     padding:10px;
      box-shadow: 0px 0px 1px white;
      gap: .5rem;
+     grid-column: 1/2;
 
 
 
@@ -134,6 +138,28 @@ font-weight: bold;
 {
  background-color: green; 
  border-radius:2px;  
+}
+.database-response
+{
+    font-weight: bold;
+    text-align: center;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: red;
+    grid-column: 2/5;
+    width: 95%;
+    overflow-x: auto;
+
+    
+
+}
+.database-response ul
+{
+    list-style: none;
+   
+
 }
  </style>   
     

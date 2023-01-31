@@ -10,6 +10,9 @@ require ("./Components/nav.php")
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./script.js"></script>
+    
    
 </head>
 <body>
@@ -19,13 +22,13 @@ require ("./Components/nav.php")
 <ul>
     <li><h1>WELCOME TO LTQS HACKING LABS</h1>  </li>
     <li><h1 class="lab-title">SQL injection</h1></li>
-    <li><button class="lbtn">See documentation</button></li>
+    <li><button class="lbtn" id="docBtn">See SQL Injection documentation</button></li>
 
 
     <div class="bottom-nav">
         <li>other labs</li>
-        <li>github</li>
-        <li>contacts</li>
+        <li><a href="https://github.com/leonTech254/LTQS_SQL_INJECTION_LAB/">github</a></li>
+        <li><a href="./views/contrib/">contacts</a></li>
     </div>
 </ul>
 </div>
@@ -94,7 +97,7 @@ body
 .bottom-nav
 {
     position: absolute;
-    bottom: 0;
+    bottom: 6rem;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -118,5 +121,7 @@ body
 }
 
 </style>    
+
+
 </body>
 </html>
