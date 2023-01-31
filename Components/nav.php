@@ -14,8 +14,8 @@ $root_path=$_SERVER['HTTP_HOST']."/HACKLAB/LTQS_SQLINJECTION/";
 ?>
 <ul>
     <li><a href="http://<?php echo $root_path ?>" class="home">HOME</a> </li>
-    <li><a href="http://<?php echo $root_path."views/setup" ?>">Setup</a></li>
-    <li><a href="http://<?php echo $root_path."views/" ?>">Labs</a></li>
+    <li><a href="http://<?php echo $root_path."views/setup/" ?>">Setup</a></li>
+    <li><a href="http://<?php echo $root_path."views/forms/" ?>">Labs</a></li>
     <li><a href="http://<?php echo $root_path."views/" ?>">Contribute</a></li>
 </ul>
 

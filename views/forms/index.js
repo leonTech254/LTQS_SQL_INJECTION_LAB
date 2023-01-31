@@ -17,7 +17,6 @@ $(document).ready(function () {
       },
         success: function (response) {
             $("#container").html(response);
-           
             let query_status=response['query_status'];
             let querysent=response['our_sql_query'];
             let userdat=response['UserData'];
