@@ -1,5 +1,5 @@
 <?php
-require ("./Components/nav.html")
+require ("./Components/nav.php")
 
 ?>
 
@@ -104,8 +104,6 @@ body
 {
     padding: 10px;
     font-size: medium;
-
-
 }
 .lab-title
 {

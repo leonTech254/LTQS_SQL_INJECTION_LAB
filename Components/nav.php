@@ -8,15 +8,25 @@
 </head>
 <body>
 <nav>
+<?php
+// echo $_SERVER['HTTP_HOST'];
+$root_path=$_SERVER['HTTP_HOST']."/HACKLAB/LTQS_SQLINJECTION/";
+?>
 <ul>
-    <li><a href="" class="home">HOME</a> </li>
-    <li><a href="">Setup</a></li>
-    <li><a href="">Labs</a></li>
-    <li><a href="">Contribute</a></li>
+    <li><a href="http://<?php echo $root_path ?>" class="home">HOME</a> </li>
+    <li><a href="http://<?php echo $root_path."views/setup" ?>">Setup</a></li>
+    <li><a href="http://<?php echo $root_path."views/" ?>">Labs</a></li>
+    <li><a href="http://<?php echo $root_path."views/" ?>">Contribute</a></li>
 </ul>
 
-</nav>
 
+
+
+</nav>
+<div class="margin-default">
+
+
+</div>
 <style lang="css">
 *
 {
@@ -54,6 +64,10 @@ nav ul a
 {
     text-decoration: none;
     padding: 10px;
+}
+.margin-default
+{
+    margin-top: 5rem;
 }
 
 </style>
