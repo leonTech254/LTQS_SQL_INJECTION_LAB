@@ -16,7 +16,14 @@ $(document).ready(function () {
             "password":password,
       },
         success: function (response) {
-        $("#container").html(response);
+            $("#container").html(response);
+           
+            let query_status=response['query_status'];
+            let querysent=response['our_sql_query'];
+            let userdat=response['UserData'];
+            $('#status').html(query_status);
+            $('#query').html(querysent);
+            $('#data').html(userdat);
       }
     });
   });

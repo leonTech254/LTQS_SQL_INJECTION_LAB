@@ -34,6 +34,13 @@ require ("../../Components/nav.php");
         </div>
 
         <div class="database-response" id="container">
+<ul>
+    <li><span class="label" id="status"></span> <span></span></li>
+    <li><span class="label" id="query"></span> <span></span></li>
+    <li><span class="label" id="data"></span> <span></span></li>
+</ul>
+
+
         </div>
     </section>
 

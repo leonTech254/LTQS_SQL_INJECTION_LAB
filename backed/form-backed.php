@@ -23,9 +23,10 @@ echo json_encode($responseContainer);
 
 }else
 {
-   $responseContainer["query"]="Failed to execute";
-   $responseContainer["Your_sql_query"]=$sql;
+   $responseContainer['query_status']='Failed to execute';
+   $responseContainer['Your_sql_query']=$sql;
     echo json_encode($responseContainer);
+    $responseContainer['UserData']='no data';
 }
 
 
