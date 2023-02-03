@@ -1,5 +1,40 @@
 <?php
+
 require ("../database/database-config.php");
+
+
+$counter=0;
+function logs($attempt,$issuccessful)
+{
+    global $counter;
+    
+
+    if ($counter==0)
+    {
+   $counter+=1;
+   global $database;
+   global $user;
+   global $pass;
+   global $server;
+  
+    $conn_db=new mysqli($server,$user,$pass,$database);
+    $date=date('Y/m/d').date("h:i:sa");
+    $sql="INSERT INTO Logs(sqlattemps,IsSucess,dateAttempted) VALUES($attempt,$issuccessful,$date)";
+    mysqli_query($conn_db,$sql);
+    
+    }
+
+  
+
+ 
+    
+    
+}
+
+
+
+
+
 $username = $_POST['username'];
 $password = $_POST['password'];
 $conn=new mysqli($server,$user,$pass,$database);
@@ -14,10 +49,12 @@ if($result)
 {
 while($row=mysqli_fetch_assoc($result))
 {
+logs($sql,"success");
 $responseContainer["query"]="Sucessfull";
 $responseContainer["Your_sql_query"]=$sql;
 $responseContainer['UserData']=$row;
 echo json_encode($responseContainer);
+
 }
 
 
@@ -27,6 +64,7 @@ echo json_encode($responseContainer);
    $responseContainer['Your_sql_query']=$sql;
     echo json_encode($responseContainer);
     $responseContainer['UserData']='no data';
+    logs($sql,"failed");
 }
 
 
