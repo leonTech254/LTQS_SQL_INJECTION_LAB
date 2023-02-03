@@ -57,8 +57,12 @@ foreach($firstnames as $name)
    
     
 }
+ $sql_table="CREATE TABLE IF NOT EXISTS Logs(id INT AUTO_INCREMENT PRIMARY KEY,sqlattemps $varchar,SuccessfulAtempts $varchar, FailedAttempts $varchar, dateAttempted $varchar)";
+ mysqli_query($db_conn,$sql_table);
     
 }
+
+
 
 
 
