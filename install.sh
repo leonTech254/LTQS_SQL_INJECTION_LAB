@@ -1,4 +1,6 @@
 
+#the Script is not yet develloped fully nor  tested considered installing manually
+
 if [ -d "/opt/lampp" ]; then
 cd /opt/lampp/htdocs/
 mkdir HACKLAB && cd HACKLAB && mkdir LTQS_SQLINJECTION
