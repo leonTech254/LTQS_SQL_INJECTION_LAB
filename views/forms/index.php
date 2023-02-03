@@ -36,7 +36,7 @@ require ("../../Components/nav.php");
         <div class="database-response" id="container">
             <span>
                 Database response will display here. <br>
-                Try inserting this <span>leon' OR '1'='1'#</span> on the username field and type anything for your password
+                Try inserting this <span class="code-example">leon' OR '1'='1'#</span> on the username field and type anything for your password
             </span>
 <ul>
     <li><span class="label" id="status"></span> <span></span></li>
@@ -161,6 +161,12 @@ font-weight: bold;
     list-style: none;
    
 
+}
+.code-example
+{
+    color: green;
+    font-weight: bold;
+    background-color: yellow;
 }
  </style>   
     
