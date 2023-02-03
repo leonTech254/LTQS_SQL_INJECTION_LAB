@@ -35,7 +35,8 @@ require ("../../Components/nav.php");
 
         <div class="database-response" id="container">
             <span>
-                Database response will display here.
+                Database response will display here. <br>
+                Try inserting this <span>leon' OR '1'='1'#</span> on the username field and type anything for your password
             </span>
 <ul>
     <li><span class="label" id="status"></span> <span></span></li>
