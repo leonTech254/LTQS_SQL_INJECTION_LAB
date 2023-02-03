@@ -16,12 +16,14 @@ function logs($attempt,$issuccessful)
    global $user;
    global $pass;
    global $server;
+   $filter_sting=addslashes($attempt);
+   echo $filter_sting;
   
     $conn_db=new mysqli($server,$user,$pass,$database);
     $date=date('Y/m/d').date("h:i:sa");
-    $sql="INSERT INTO Logs(sqlattemps,IsSucess,dateAttempted) VALUES($attempt,$issuccessful,$date)";
+    $sql="INSERT INTO Logs(sqlattemps,IsSucess,dateAttempted) VALUES('$filter_sting','$issuccessful','$date')";
     mysqli_query($conn_db,$sql);
-    
+    echo $date;
     }
 
   
@@ -49,7 +51,7 @@ if($result)
 {
 while($row=mysqli_fetch_assoc($result))
 {
-logs($sql,"success");
+logs($username,"success");
 $responseContainer["query"]="Sucessfull";
 $responseContainer["Your_sql_query"]=$sql;
 $responseContainer['UserData']=$row;
@@ -64,7 +66,7 @@ echo json_encode($responseContainer);
    $responseContainer['Your_sql_query']=$sql;
     echo json_encode($responseContainer);
     $responseContainer['UserData']='no data';
-    logs($sql,"failed");
+    logs($username,"failed");
 }
 
 

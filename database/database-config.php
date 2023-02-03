@@ -36,7 +36,7 @@ echo mysqli_error($conn);
 $db_conn=mysqli_connect($server,$user,$pass,$database);
 // print($_SERVER['DOCUMENT_ROOT']."LTQS_SQLINJECTION/");
 // creatinting of tables
-$varchar="VARCHAR(20) NOT NULL";
+$varchar="VARCHAR(100) NOT NULL";
 $int="INT(100) NOT NULL";
 $varchar_default="/image/users/user.jpg";
  $sql_table="CREATE TABLE IF NOT EXISTS Users( id INT AUTO_INCREMENT PRIMARY KEY, username $varchar,firstname $varchar, lastname $varchar,password $varchar, image VARCHAR(100) DEFAULT '/image')";
